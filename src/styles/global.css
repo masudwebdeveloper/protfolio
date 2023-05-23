@@ -4,7 +4,10 @@
 
 @layer components {
   .navbar {
-    @apply text-2xl text-slate-50 opacity-75 hover:opacity-100 hover:text-blue-700;
+    @apply text-xl text-slate-50 opacity-75 hover:opacity-100 hover:text-blue-700;
+  }
+  .mobile-nav{
+    @apply text-xl text-slate-50 opacity-75 hover:opacity-100 hover:font-medium
   }
 }
 
@@ -12,4 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: 0;
 }
