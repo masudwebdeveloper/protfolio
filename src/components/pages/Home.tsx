@@ -7,6 +7,7 @@ import SKills from "../common/SKills";
 import MyWork from "../common/MyWork";
 import Subcribe from "../common/Subcribe";
 import Contact from "../common/Contact";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -42,6 +43,10 @@ const Home = () => {
       {/* contact section */}
       <div className="bg-[#0D012C]">
         <Contact />
+      </div>
+      {/* footer section */}
+      <div className="bg-[#0D012C]">
+        <Footer />
       </div>
 
     </main>
