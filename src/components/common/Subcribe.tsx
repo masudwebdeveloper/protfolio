@@ -22,7 +22,7 @@ const Subcribe = () => {
                 className="py-5 px-10 w-3/5 rounded-full ml-10 text-gray-900 text-xl"
                 placeholder="Enter you email"
               />
-              <button className="py-5 px-10 rounded-full text-gray-100 text-xl font-bold bg-blue-500 ml-10" type="submit">Subcribe</button>
+              <button className="py-5 px-10 hover:bg-blue-600 transition duration-150 rounded-full text-gray-100 text-xl font-bold bg-blue-500 ml-10" type="submit">Subcribe</button>
             </form>
           </div>
         </div>

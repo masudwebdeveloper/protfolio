@@ -6,6 +6,7 @@ import Service from "../common/Service";
 import SKills from "../common/SKills";
 import MyWork from "../common/MyWork";
 import Subcribe from "../common/Subcribe";
+import Contact from "../common/Contact";
 
 const Home = () => {
   return (
@@ -37,6 +38,10 @@ const Home = () => {
       {/* subscribe section */}
       <div className="bg-[#0D012C]">
         <Subcribe />
+      </div>
+      {/* contact section */}
+      <div className="bg-[#0D012C]">
+        <Contact />
       </div>
 
     </main>

@@ -18,7 +18,7 @@ const Banner = () => {
           Am a Front-end base Back-end focus web developer passionate and
           experienced in buinding Web application.
         </p>
-        <button className="flex items-center bg-gradient-to-tr from-pink-500 to-violet-600 px-10 py-4 rounded-full mt-10 text-2xl font-medium text-white group">
+        <button className="flex items-center bg-blue-500 hover:bg-blue-600 transition duration-150 px-10 py-4 rounded-full mt-10 text-2xl font-medium text-white group">
           Hire me
           <span>
             <TiChevronRightOutline className="inline-block ml-1 translate-x-0 group-hover:translate-x-2 transition-all duration-200"></TiChevronRightOutline>
