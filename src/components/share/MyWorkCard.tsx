@@ -7,7 +7,7 @@ type WorkType = {
 };
 const MyWorkCard = ({ work }: WorkType) => {
   return (
-    <div className="glass-effect p-7 group h-[750px]">
+    <div className="glass-effect p-7 group min-h-[650px]">
       <div>
         <img
           className="rounded-lg group-hover:scale-105 transition-all duration-200"
