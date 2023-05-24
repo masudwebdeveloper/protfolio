@@ -11,16 +11,16 @@ export interface IService {
 }
 import ServiceCard from "../share/ServiceCard";
 const responsive = (
-  <DiResponsive className="font-bold text-5xl text-white inline-block" />
+  <DiResponsive className="font-bold text-5xl text-gray-950 dark:text-white inline-block" />
 );
 const webDevelopment = (
-  <BsCodeSlash className="font-bold text-5xl text-white inline-block" />
+  <BsCodeSlash className="font-bold text-5xl text-gray-950 dark:text-white inline-block" />
 );
 const backEnd = (
-  <FaNodeJs className="font-bold text-5xl text-white inline-block" />
+  <FaNodeJs className="font-bold text-5xl text-gray-950 dark:text-white inline-block" />
 );
 const authentication = (
-  <SiFirebase className="font-bold text-5xl text-white inline-block" />
+  <SiFirebase className="font-bold text-5xl text-gray-950 dark:text-white inline-block" />
 );
 const services: IService[] = [
   {
@@ -53,7 +53,7 @@ const Service = () => {
   return (
     <div className="container mx-auto">
       <div className="py-16 text-center">
-        <h2 className="uppercase text-2xl text-gray-200">
+        <h2 className="uppercase text-2xl text-gray-950 dark:text-gray-200">
           What service i offer you
         </h2>
         <h1 className="uppercase text-5xl text-blue-600">Services</h1>

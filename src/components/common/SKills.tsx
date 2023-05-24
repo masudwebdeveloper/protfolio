@@ -203,12 +203,12 @@ const SKills = () => {
   return (
     <div className="container mx-auto py-20">
       <div className="py-16 text-center">
-        <h2 className="uppercase text-2xl text-gray-200">
+        <h2 className="uppercase text-2xl text-gray-950 dark:text-gray-200">
           My Skill progress so far
         </h2>
         <h1 className="uppercase text-5xl text-blue-600">SKills</h1>
       </div>
-      <div>
+      <div className="">
         <Splide
           hasTrack={true}
           options={splideOptions}
@@ -219,14 +219,7 @@ const SKills = () => {
               <SkillCard skill={skill} />
             </SplideSlide>
           ))}
-          <div className="splide__progress">
-            <div className="splide__progress__bar" />
-          </div>
-
-          <button className="splide__toggle" type="button">
-            <span className="splide__toggle__play">Play</span>
-            <span className="splide__toggle__pause">Pause</span>
-          </button>
+          
         </Splide>
       </div>
     </div>

@@ -25,31 +25,31 @@ const MyWorkCard = ({ work }: WorkType) => {
       </div>
       <div className="mt-10 flex items-center justify-between">
         <a
-          className="flex items-center gap-x-2 text-xl text-gray-100"
+          className="flex items-center gap-x-2 text-xl text-gray-950 dark:text-gray-100"
           href={work.liveLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub className="text-2xl text-white" />
+          <FaGithub className="text-2xl text-gray-950 dark:text-white" />
           Live Link
         </a>
         <a
-          className="flex items-center gap-x-2 text-xl text-gray-100"
+          className="flex items-center gap-x-2 text-xl text-gray-950 dark:text-gray-100"
           href={work.clientCodeLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub className="text-2xl text-white" />
+          <FaGithub className="text-2xl text-gray-950 dark:text-white" />
           client source
         </a>
         {work.serverCodeLink && (
           <a
-            className="flex items-center gap-x-2 text-xl text-gray-100"
+            className="flex items-center gap-x-2 text-xl text-gray-950 dark:text-gray-100"
             href={work.serverCodeLink}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub className="text-2xl text-white" />
+            <FaGithub className="text-2xl text-gray-950 dark:text-white" />
             server source
           </a>
         )}

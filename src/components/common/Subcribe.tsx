@@ -2,15 +2,15 @@ import React from "react";
 
 const Subcribe = () => {
   return (
-    <div className="container mx-auto py-20 bg-[#0C0122]">
+    <div className="container mx-auto py-20 bg-gray-200 dark:bg-[#0C0122]">
       <div className="p-5">
         <h4 className="text-blue-500 text-xl font-bold">Newsletter</h4>
         <div className="flex">
           <div>
-            <h2 className="text-5xl font-bold text-gray-200 mt-5">
+            <h2 className="text-5xl font-bold text-gray-950 dark:text-gray-200 mt-5">
               Let's Work Together
             </h2>
-            <p className="text-gray-300 mt-5">
+            <p className=" text-gray-950 dark:text-gray-300 mt-5">
               Are you impressed and want a project done, give a call or email me
               any time.
             </p>

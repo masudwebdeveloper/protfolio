@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Banner from "../common/Banner";
 import Header from "../layout/Header";
 import About from "../common/About";
@@ -7,48 +7,62 @@ import SKills from "../common/SKills";
 import MyWork from "../common/MyWork";
 import Subcribe from "../common/Subcribe";
 import Contact from "../common/Contact";
-import Footer from "./Footer";
-
+import Footer from "../layout/Footer";
+import { BiSun, BiMoon } from "react-icons/bi";
+import { ThemeContext, ThemeContextProps } from "../../contexts/ThemeProvider";
 const Home = () => {
+  const themeContext = useContext<ThemeContextProps | undefined>(ThemeContext);
+  if (!themeContext) {
+    return null;
+  }
+  const { theme, handleTheme } = themeContext;
   return (
     <main>
       {/* Header */}
-      <div className={`bg-[#0D012C] sticky top-0 z-50`}>
+      <div
+        className={`dark:bg-[#0b0321] bg-gray-200 sticky top-0 z-50 text-opacity-0`}
+      >
         <Header />
       </div>
       {/* Banner */}
-      <div className="bg-[#1F2937]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <Banner />
       </div>
       {/* about section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <About />
       </div>
       {/* service section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <Service />
       </div>
       {/* skill section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <SKills />
       </div>
       {/* my work section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <MyWork />
       </div>
       {/* subscribe section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <Subcribe />
       </div>
       {/* contact section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <Contact />
       </div>
       {/* footer section */}
-      <div className="bg-[#0D012C]">
+      <div className="dark:bg-[#0D012C] bg-gray-100">
         <Footer />
       </div>
-
+      <div className={`w-14 h-14 flex items-center justify-center fixed right-10 bottom-10 rounded-full ${theme === 'light' ? "bg-gray-300": "bg-gray-700"}`}>
+        {theme === "dark" ? (
+          <BiSun onClick={handleTheme} className="text-3xl text-yellow-300" />
+        ) : (
+          <BiMoon onClick={handleTheme} className="text-3xl" />
+        )}
+      </div>
     </main>
   );
 };

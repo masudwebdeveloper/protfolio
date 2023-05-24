@@ -4,10 +4,10 @@
 
 @layer components {
   .navbar {
-    @apply text-xl text-slate-50 opacity-75 hover:opacity-100 hover:text-blue-700;
+    @apply text-xl text-gray-950 dark:text-slate-50 opacity-75 hover:opacity-100 hover:text-blue-700;
   }
   .mobile-nav {
-    @apply text-xl text-slate-50 opacity-75 hover:opacity-100 hover:font-medium;
+    @apply text-xl text-gray-900 dark:text-slate-50 opacity-75 hover:opacity-100 hover:font-medium;
   }
 }
 
@@ -18,6 +18,24 @@
   text-decoration: none;
   list-style: none;
   outline: 0;
+}
+
+:root {
+  --text-color: black;
+  --background-color: white;
+  --glass-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.37);
+  --border-color: rgba(255, 255, 255, 0.18);
+  --highlight-color: rgb(238, 32, 211);
+}
+
+.dark {
+  --text-color: white;
+  --background-color: black;
+  --glass-color: rgba(255, 255, 255, 0.05);
+  --shadow-color: rgba(255, 255, 255, 0.15);
+  --border-color: rgba(255, 255, 255, 0.3);
+  --highlight-color: rgb(240, 35, 220);
 }
 
 .glass-effect {
