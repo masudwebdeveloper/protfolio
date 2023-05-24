@@ -50,7 +50,7 @@
   transition: border 0.3s ease-in-out;
   padding: 7px 20px;
   margin: 20px 0;
-  color: rgb(255, 255, 255, 0.9)
+  color: rgba(233, 215, 16, 0.9)
 }
 .glass-effect:hover .btn-effect{
   border: 1px solid rgb(240, 35, 220)

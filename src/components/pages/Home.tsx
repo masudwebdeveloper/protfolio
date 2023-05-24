@@ -4,12 +4,13 @@ import Header from "../layout/Header";
 import About from "../common/About";
 import Service from "../common/Service";
 import SKills from "../common/SKills";
+import MyWork from "../common/MyWork";
 
 const Home = () => {
   return (
     <main>
       {/* Header */}
-      <div className={`bg-[#334155] sticky top-0 z-50`}>
+      <div className={`bg-[#0D012C] sticky top-0 z-50`}>
         <Header />
       </div>
       {/* Banner */}
@@ -28,6 +29,11 @@ const Home = () => {
       <div className="bg-[#0D012C]">
         <SKills />
       </div>
+      {/* my work section */}
+      <div className="bg-[#0D012C]">
+        <MyWork />
+      </div>
+
     </main>
   );
 };
