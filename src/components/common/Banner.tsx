@@ -2,6 +2,10 @@ import bannerImage from "../../assets/images/15.png";
 import { TiChevronRightOutline } from "react-icons/ti";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter} from "react-icons/fa";
 const Banner = () => {
+  const handleHireMeClick = () => {
+    window.location.href = 'mailto:abdullainfo30@gmail.com';
+  };
+
   return (
     <div className="container mx-auto flex items-center h-[100vh]">
       <div className="-mt-10">
@@ -18,7 +22,7 @@ const Banner = () => {
           Am a Front-end base Back-end focus web developer passionate and
           experienced in buinding Web application.
         </p>
-        <button className="flex items-center bg-blue-500 hover:bg-blue-600 transition duration-150 px-10 py-4 rounded-full mt-10 text-2xl font-medium text-white group">
+        <button onClick={handleHireMeClick} className="flex items-center bg-blue-500 hover:bg-blue-600 transition duration-150 px-10 py-4 rounded-full mt-10 text-2xl font-medium text-white group">
           Hire me
           <span>
             <TiChevronRightOutline className="inline-block ml-1 translate-x-0 group-hover:translate-x-2 transition-all duration-200"></TiChevronRightOutline>
