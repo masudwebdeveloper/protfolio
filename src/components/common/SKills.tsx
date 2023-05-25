@@ -22,8 +22,13 @@ import { TbBrandNextjs } from "react-icons/tb";
 import SkillCard from "../share/SkillCard";
 // import Swiper core and required modules
 
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination } from "swiper";
 
 export interface ISkill {
   id: number;
@@ -38,19 +43,31 @@ const SKills = () => {
   const github = <FaGithub className="text-2xl sm:text-4xl text-[#171515]" />;
   const html = <FaHtml5 className="text-2xl sm:text-4xl text-[#E86228]" />;
   const css = <FaCss3 className="text-2xl sm:text-4xl text-[#2862E9]" />;
-  const bootStrap = <FaBootstrap className="text-2xl sm:text-4xl text-[#7410EC]" />;
+  const bootStrap = (
+    <FaBootstrap className="text-2xl sm:text-4xl text-[#7410EC]" />
+  );
   const react = <FaReact className="text-2xl sm:text-4xl text-[#5CD0EE]" />;
   const node = <FaNodeJs className="text-2xl sm:text-4xl text-[#63985E]" />;
-  const javascript = <IoLogoJavascript className="text-2xl sm:text-4xl text-[#000000]" />;
-  const typescript = <SiTypescript className="text-2xl sm:text-4xl text-[#0174C2]" />;
-  const tailwind = <SiTailwindcss className="text-2xl sm:text-4xl text-[#06ADC9]" />;
+  const javascript = (
+    <IoLogoJavascript className="text-2xl sm:text-4xl text-[#000000]" />
+  );
+  const typescript = (
+    <SiTypescript className="text-2xl sm:text-4xl text-[#0174C2]" />
+  );
+  const tailwind = (
+    <SiTailwindcss className="text-2xl sm:text-4xl text-[#06ADC9]" />
+  );
   const express = <SiExpress className="text-2xl sm:text-4xl text-[#000000]" />;
   const mongodb = <SiMongodb className="text-2xl sm:text-4xl text-[#459544]" />;
-  const firebase = <SiFirebase className="text-2xl sm:text-4xl text-[#E97B0C]" />;
+  const firebase = (
+    <SiFirebase className="text-2xl sm:text-4xl text-[#E97B0C]" />
+  );
   const vercel = <SiVercel className="text-2xl sm:text-4xl text-[#000000]" />;
   const netlify = <SiNetlify className="text-2xl sm:text-4xl text-[#2DAFB2]" />;
   const redux = <SiRedux className="text-2xl sm:text-4xl text-[#7046B2]" />;
-  const next = <TbBrandNextjs className="text-2xl sm:text-4xl text-[#000000]" />;
+  const next = (
+    <TbBrandNextjs className="text-2xl sm:text-4xl text-[#000000]" />
+  );
 
   const skills: ISkill[] = [
     {
@@ -173,65 +190,31 @@ const SKills = () => {
       icon: netlify,
     },
   ];
-  const splideOptions: {
-    type: string;
-    rewind: boolean;
-    autoplay: boolean;
-    interval: number;
-    perPage: number;
-    perMove: number;
-    gap: string;
-    pauseOnHover: boolean;
-    pauseOnFocus: boolean;
-    speed: number;
-    pagination: boolean;
-    arrows: boolean;
-    mediaQuery: string;
-    breakpoints: {
-      640: {
-        perPage: number;
-      };
-    };
-  } = {
-    type: "slide",
-    rewind: true,
-    autoplay: true,
-    interval: 1500,
-    perPage: 5,
-    perMove: 1,
-    gap: "1rem",
-    pauseOnHover: true,
-    pauseOnFocus: false,
-    speed: 1000,
-    pagination: false,
-    arrows: false,
-    mediaQuery: "max",
-    breakpoints: {
-      640: {
-        perPage: 2,
-      },
-    },
-  };
   return (
     <div className="container mx-auto sm:py-20">
       <div className="py-7 sm:py-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           My Skill progress so far
         </h2>
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600">SKills</h1>
+        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600">
+          SKills
+        </h1>
       </div>
       <div className="">
-        <Splide
-          hasTrack={true}
-          options={splideOptions}
-          aria-label="My Favorite Images"
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={5}
+          navigation={true}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
         >
           {skills.map((skill) => (
-            <SplideSlide key={skill.id}>
+            <SwiperSlide key={skill.id}>
               <SkillCard skill={skill} />
-            </SplideSlide>
+            </SwiperSlide>
           ))}
-        </Splide>
+        </Swiper>
       </div>
     </div>
   );

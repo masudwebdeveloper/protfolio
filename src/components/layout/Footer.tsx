@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-
 const Footer = () => {
-  const [date, setDate] = useState<Date>(new Date());
+  const date: Date= new Date();
   const getYear = date.getFullYear();
 
   return (

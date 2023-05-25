@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { BiPhone } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Subcribe = () => {
   return (
     <div className="container mx-auto py-10 sm:py-20 bg-gray-200 dark:bg-[#0C0122]">

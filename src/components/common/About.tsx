@@ -1,4 +1,3 @@
-import React from "react";
 import aboutImage from "../../assets/images/mail-to-sms-compatible-toute-messagerie.svg";
 import { TiChevronRightOutline } from "react-icons/ti";
 

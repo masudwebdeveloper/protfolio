@@ -1,4 +1,3 @@
-// import React from "react";
 import { DiResponsive } from "react-icons/di";
 import { BsCodeSlash } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";

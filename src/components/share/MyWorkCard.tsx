@@ -1,6 +1,4 @@
-import React from "react";
 import { IMyWork } from "../common/MyWork";
-import github from "../../assets/images/github.png";
 import { FaGithub } from "react-icons/fa";
 type WorkType = {
   work: IMyWork;

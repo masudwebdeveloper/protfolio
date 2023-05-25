@@ -1,4 +1,3 @@
-import React from "react";
 import { ISkill } from "../common/SKills";
 type SkillType = {
   skill: ISkill;
