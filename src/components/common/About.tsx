@@ -4,14 +4,14 @@ import { TiChevronRightOutline } from "react-icons/ti";
 
 const About = () => {
   return (
-    <div className="flex container mx-auto items-center gap-5 h-[70vh]">
+    <div className="flex flex-col-reverse sm:flex-row gap-y-5 container mx-auto items-center sm:h-[70vh] py-4">
       <img src={aboutImage} className="w-full sm:w-2/5" alt="aboutIamge" />
-      <div>
-        <h4 className="text-blue-500 text-2xl font-bold mb-4">About Me</h4>
-        <h2 className="text-gray-950 dark:text-gray-200 text-4xl font-normal uppercase">
+      <div className="mx-5">
+        <h4 className="text-blue-500 text-lg sm:text-2xl font-bold mb-4">About Me</h4>
+        <h2 className="text-gray-950 dark:text-gray-200 text-xl sm:text-4xl font-normal uppercase">
           Why Hire me for your next Projects?
         </h2>
-        <p className="text-gray-950 dark:text-gray-200 text-xl mt-5">
+        <p className="text-gray-950 dark:text-gray-200 text-sm sm:text-xl mt-5">
           I'm 24 years old creative <strong>Web developer</strong> based in{" "}
           <a href="http://">
             <strong>front-end</strong>
@@ -21,7 +21,7 @@ const About = () => {
           standards🔥
         </p>
         <br />
-        <p className="text-gray-950 dark:text-gray-200 text-xl">
+        <p className="text-gray-950 dark:text-gray-200 text-sm sm:text-xl">
           I am currently complete web development from{" "}
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <strong className="hover:text-blue-600">Programming Hero</strong>
@@ -30,7 +30,7 @@ const About = () => {
         </p>
         <a
           href="https://drive.google.com/file/d/1CxzlmCRkpOFJf7w51dFG6ROXvRCyw5Oz/view?usp=drive_link"
-          className="flex items-center bg-blue-500 hover:bg-blue-600 transition duration-150 px-10 py-4 rounded-full mt-10 text-2xl font-medium text-white group sm:w-[250px]"
+          className="flex items-center w-[180px] bg-blue-500 hover:bg-blue-600 transition duration-150 px-5 sm:px-10 py-2 sm:py-4 rounded-full mt-4 sm:mt-10 text-xl sm:text-2xl font-normal sm:font-medium text-white group sm:w-[250px]"
           target="_blank"
         >
           Download cv

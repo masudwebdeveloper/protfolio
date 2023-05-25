@@ -56,11 +56,11 @@ const Home = () => {
       <div className="dark:bg-[#0D012C] bg-gray-100">
         <Footer />
       </div>
-      <div className={`w-14 h-14 flex items-center justify-center fixed right-10 bottom-10 rounded-full ${theme === 'light' ? "bg-gray-300": "bg-gray-700"}`}>
+      <div className={`w-10 sm:w-14 h-10 sm:h-14 flex items-center justify-center fixed right-4 sm:right-10 bottom-10 rounded-full ${theme === 'light' ? "bg-gray-300": "bg-gray-700"}`}>
         {theme === "dark" ? (
-          <BiSun onClick={handleTheme} className="text-3xl text-yellow-300" />
+          <BiSun onClick={handleTheme} className="text-xl sm:text-3xl text-yellow-300" />
         ) : (
-          <BiMoon onClick={handleTheme} className="text-3xl" />
+          <BiMoon onClick={handleTheme} className="text-xl sm:text-3xl" />
         )}
       </div>
     </main>

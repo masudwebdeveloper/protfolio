@@ -52,13 +52,13 @@ const services: IService[] = [
 const Service = () => {
   return (
     <div className="container mx-auto">
-      <div className="py-16 text-center">
-        <h2 className="uppercase text-2xl text-gray-950 dark:text-gray-200">
+      <div className="py-3 sm:py-16 text-center">
+        <h2 className="uppercase text-md sm:text-2xl text-gray-950 dark:text-gray-200">
           What service i offer you
         </h2>
-        <h1 className="uppercase text-5xl text-blue-600">Services</h1>
+        <h1 className="uppercase text-2xl sm:text-5xl font-bold text-blue-600">Services</h1>
       </div>
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-5 sm:gap-x-10 mx-2">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}

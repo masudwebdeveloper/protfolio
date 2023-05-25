@@ -7,7 +7,7 @@ type WorkType = {
 };
 const MyWorkCard = ({ work }: WorkType) => {
   return (
-    <div className="p-7 group min-h-[650px] bg-gradient-to-tr from-white-10 to-transparent backdrop-filter backdrop-blur-md shadow-md border-opacity-20 border border-gray-700 dark:border-gray-200 rounded-lg transition duration-300 ease-in-out">
+    <div className="p-7 group sm:min-h-[650px] bg-gradient-to-tr from-white-10 to-transparent backdrop-filter backdrop-blur-md shadow-md border-opacity-20 border border-gray-700 dark:border-gray-200 rounded-lg transition duration-300 ease-in-out">
       <div>
         <img
           className="rounded-lg group-hover:scale-105 transition-all duration-200"
@@ -23,7 +23,7 @@ const MyWorkCard = ({ work }: WorkType) => {
           {work.title}
         </h2>
       </div>
-      <div className="mt-10 flex items-center justify-between">
+      <div className="mt-10 flex flex-col gap-y-5 sm:flex-row items-center justify-between">
         <a
           className="flex items-center gap-x-2 text-xl text-gray-950 dark:text-gray-100"
           href={work.liveLink}

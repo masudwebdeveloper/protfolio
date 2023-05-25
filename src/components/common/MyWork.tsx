@@ -92,6 +92,12 @@ const MyWork = () => {
     speed: number;
     pagination: boolean;
     arrows: boolean;
+    mediaQuery: string,
+    breakpoints: {
+      640: {
+        perPage: number,
+      },
+    },
   } = {
     type: "slide",
     rewind: true,
@@ -105,14 +111,20 @@ const MyWork = () => {
     speed: 1000,
     pagination: false,
     arrows: false,
+    mediaQuery: "max",
+    breakpoints: {
+      640: {
+        perPage: 1,
+      },
+    },
   };
   return (
-    <div className="container mx-auto py-20">
-      <div className="py-16 text-center">
-        <h2 className="uppercase text-2xl text-gray-950 dark:text-gray-200">
+    <div className="container mx-auto sm:py-20">
+      <div className="py-10 sm:py-16 text-center">
+        <h2 className="uppercase text-xl sm:text-2xl text-gray-950 dark:text-gray-200">
           Check out my all Projects
         </h2>
-        <h1 className="uppercase text-5xl text-blue-600">My Works</h1>
+        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600">My Works</h1>
       </div>
       <div>
         <Splide
@@ -125,14 +137,7 @@ const MyWork = () => {
               <MyWorkCard work={work} />
             </SplideSlide>
           ))}
-          <div className="splide__progress">
-            <div className="splide__progress__bar" />
-          </div>
-
-          <button className="splide__toggle" type="button">
-            <span className="splide__toggle__play">Play</span>
-            <span className="splide__toggle__pause">Pause</span>
-          </button>
+          
         </Splide>
       </div>
     </div>
