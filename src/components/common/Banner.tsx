@@ -12,7 +12,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="container mx-auto flex gap-y-8 flex-col sm:flex-row items-center sm:h-[100vh]">
+    <div id="banner" className="container sm:px-20 flex gap-y-8 flex-col sm:flex-row items-center sm:h-[100vh]">
       <div className="sm:-mt-10">
         <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:-mt-10 sm:mb-4">
           Web Developer
@@ -44,28 +44,28 @@ const Banner = () => {
         <div className="mt-5 flex justify-center sm:justify-start gap-x-5">
           <a
             target="_blank"
-            href="#"
+            href="https://www.facebook.com/masudwebdeveloper"
             className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border sm:border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
           >
             <FaFacebookF className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
           </a>
           <a
             target="_blank"
-            href="#"
+            href="https://www.linkedin.com/in/mrmasudrana/"
             className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
           >
             <FaLinkedinIn className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
           </a>
           <a
             target="_blank"
-            href="#"
+            href="https://www.instagram.com/masud_1432/"
             className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
           >
             <FaInstagram className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
           </a>
           <a
             target="_blank"
-            href="#"
+            href="https://twitter.com/MasudRana2143"
             className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
           >
             <FaTwitter className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />

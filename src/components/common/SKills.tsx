@@ -20,15 +20,6 @@ import {
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import SkillCard from "../share/SkillCard";
-// import Swiper core and required modules
-
-import "@splidejs/react-splide/css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { Navigation, Pagination } from "swiper";
 
 export interface ISkill {
   id: number;
@@ -191,7 +182,7 @@ const SKills = () => {
     },
   ];
   return (
-    <div className="container mx-auto sm:py-20">
+    <div id="skill" className="container sm:px-20 sm:py-20">
       <div className="py-7 sm:py-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           My Skill progress so far
@@ -200,21 +191,10 @@ const SKills = () => {
           SKills
         </h1>
       </div>
-      <div className="">
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={20}
-          slidesPerView={5}
-          navigation={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          {skills.map((skill) => (
-            <SwiperSlide key={skill.id}>
-              <SkillCard skill={skill} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="grid grid-cols-2 mx-2 sm:mx-0 sm:grid-cols-7 gap-2 justify-center">
+        {skills.map((skill) => (
+          <SkillCard key={skill.id} skill={skill} />
+        ))}
       </div>
     </div>
   );

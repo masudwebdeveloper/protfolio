@@ -9,9 +9,6 @@
   .mobile-nav {
     @apply text-xl text-gray-900 dark:text-slate-50 opacity-75 hover:opacity-100 hover:font-medium;
   }
-  /* .glass-effect {
-    @apply glass-effect bg-gradient-to-tr from-white-opacity-10 to-transparent backdrop-blur-md shadow-md border-opacity-20 border border-white-opacity-20 rounded-lg transition-border duration-300 ease-in-out
-  } */
 }
 
 * {
@@ -41,7 +38,7 @@
   --highlight-color: rgb(240, 35, 220);
 }
 
-/* .glass-effect {
+.glass-effect {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.1),
@@ -53,10 +50,10 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   transition: border 0.3s ease-in-out;
-} */
-/* .glass-effect:hover{
+}
+.glass-effect:hover{
   border: 1px solid rgb(238, 32, 211)
-} */
+}
 .btn-effect {
   background: linear-gradient(
     135deg,

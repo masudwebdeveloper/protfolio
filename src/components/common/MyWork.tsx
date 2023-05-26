@@ -1,5 +1,3 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import MyWorkCard from "../share/MyWorkCard";
 export interface IMyWork {
   id: number;
@@ -77,67 +75,20 @@ const MyWork = () => {
     },
   ];
 
-  // for splide built-in options
-  const splideOptions: {
-    type: string;
-    rewind: boolean;
-    autoplay: boolean;
-    interval: number;
-    perPage: number;
-    perMove: number;
-    gap: string;
-    pauseOnHover: boolean;
-    pauseOnFocus: boolean;
-    speed: number;
-    pagination: boolean;
-    arrows: boolean;
-    mediaQuery: string,
-    breakpoints: {
-      640: {
-        perPage: number,
-      },
-    },
-  } = {
-    type: "slide",
-    rewind: true,
-    autoplay: true,
-    interval: 1500,
-    perPage: 3,
-    perMove: 1,
-    gap: "1rem",
-    pauseOnHover: true,
-    pauseOnFocus: false,
-    speed: 1000,
-    pagination: false,
-    arrows: false,
-    mediaQuery: "max",
-    breakpoints: {
-      640: {
-        perPage: 1,
-      },
-    },
-  };
   return (
-    <div className="container mx-auto sm:py-20">
+    <div id="myWork" className="container sm:px-20 sm:py-20">
       <div className="py-10 sm:py-16 text-center">
         <h2 className="uppercase text-xl sm:text-2xl text-gray-950 dark:text-gray-200">
           Check out my all Projects
         </h2>
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600">My Works</h1>
+        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600">
+          My Works
+        </h1>
       </div>
-      <div>
-        <Splide
-          hasTrack={true}
-          options={splideOptions}
-          aria-label="My Favorite Images"
-        >
-          {myWorks.map((work) => (
-            <SplideSlide key={work.id}>
-              <MyWorkCard work={work} />
-            </SplideSlide>
-          ))}
-          
-        </Splide>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mx-2 sm:mx-0">
+        {myWorks.map((work) => (
+          <MyWorkCard key={work.id} work={work} />
+        ))}
       </div>
     </div>
   );

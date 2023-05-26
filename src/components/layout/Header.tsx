@@ -18,7 +18,7 @@ const Header = () => {
   }, [toggle]);
 
   return (
-    <div className="container mx-auto">
+    <div className="container sm:px-20">
       <div className="flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-x-2 cursor-pointer">
           <img
@@ -36,25 +36,25 @@ const Header = () => {
         <div className="flex item-center gap-6">
           {/* desktop mode */}
           <div className="hidden sm:flex gap-7 items-center">
-            <Link to="#" className="navbar">
+            <a href="/" className="navbar">
               Home
-            </Link>
-            <Link to="#" className="navbar">
+            </a>
+            <a href="#about" className="navbar">
               About
-            </Link>
-            <Link to="#" className="navbar">
+            </a>
+            <a href="#service" className="navbar">
               Services
-            </Link>
-            <Link to="#" className="navbar">
+            </a>
+            <a href="#skill" className="navbar">
               Skills
-            </Link>
-            <Link to="#" className="navbar">
+            </a>
+            <a href="#myWork" className="navbar">
               My Work
-            </Link>
-            <Link to="#" className="navbar">
+            </a>
+            <a href="#contact" className="navbar">
               Contact
-            </Link>
-            <Link to="#" className="navbar">
+            </a>
+            <Link target="_blank" to="https://github.com/masudwebdeveloper" className="navbar">
               <FaGithub />
             </Link>
           </div>

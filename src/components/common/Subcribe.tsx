@@ -1,6 +1,6 @@
 const Subcribe = () => {
   return (
-    <div className="container mx-auto py-10 sm:py-20 bg-gray-200 dark:bg-[#0C0122]">
+    <div id="subscribe" className="container sm:px-20 py-10 sm:py-20 bg-gray-200 dark:bg-[#0C0122]">
       <div className="p-5">
         <h4 className="text-blue-500 text-md sm:text-xl font-bold">
           Newsletter

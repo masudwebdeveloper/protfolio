@@ -3,10 +3,12 @@ import { TiChevronRightOutline } from "react-icons/ti";
 
 const About = () => {
   return (
-    <div className="flex flex-col-reverse sm:flex-row gap-y-5 container mx-auto items-center sm:h-[70vh] py-4">
+    <div id="about" className="flex flex-col-reverse sm:flex-row gap-y-5 container sm:px-20 items-center sm:h-[70vh] py-4">
       <img src={aboutImage} className="w-full sm:w-2/5" alt="aboutIamge" />
       <div className="mx-5">
-        <h4 className="text-blue-500 text-lg sm:text-2xl font-bold mb-4">About Me</h4>
+        <h4 className="text-blue-500 text-lg sm:text-2xl font-bold mb-4">
+          About Me
+        </h4>
         <h2 className="text-gray-950 dark:text-gray-200 text-xl sm:text-4xl font-normal uppercase">
           Why Hire me for your next Projects?
         </h2>

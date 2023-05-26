@@ -37,7 +37,7 @@ const Contact = () => {
     setVerified(true);
   };
   return (
-    <div className="container mx-auto py-5 sm:py-12">
+    <div id="contact" className="container sm:px-20 py-5 sm:py-12">
       <div className="py-2 sm:py-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           I want to Hear From you
@@ -136,7 +136,7 @@ const Contact = () => {
               />
               <button
                 disabled={!verified}
-                className={`sm:mt-3 py-2 sm:py-3 w-[100px] sm:w-[150px] hover:bg-blue-600 transition duration-150 text-gray-100 rounded-full bg-blue-500 text-xl sm:text-2xl font-medium sm:-pt-2 ${
+                className={`sm:mt-3 py-2 sm:py-3 w-[100px] sm:w-[150px] dark:hover:bg-[#017AF4] transition duration-150 dark:text-[#017AF4] bg-gray-200 dark:hover:text-gray-50 rounded-full hover:bg-blue-500 hover:text-gray-50 dark:bg-[#14143A] text-xl sm:text-2xl font-medium sm:-pt-2 ${
                   !verified && "cursor-not-allowed"
                 }`}
                 type="submit"
