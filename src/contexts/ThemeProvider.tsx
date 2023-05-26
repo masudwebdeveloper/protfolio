@@ -35,8 +35,23 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
   }, [theme]);
 
   const handleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    if (theme === "dark") {
+      localStorage.removeItem("themeMode");
+      setTheme("light");
+    } else {
+      localStorage.setItem("themeMode", "dark");
+      setTheme("dark");
+    }
   };
+
+  useEffect(() => {
+    const themeMode = localStorage.getItem("themeMode");
+    if (themeMode === "dark") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
 
   const themeInfo: ThemeContextProps = { theme, handleTheme };
 

@@ -12,15 +12,15 @@ const Banner = () => {
   };
 
   return (
-    <div id="banner" className="container sm:px-20 flex gap-y-8 flex-col sm:flex-row items-center sm:h-[100vh]">
+    <div id="banner" className="sm:px-20 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
       <div className="sm:-mt-10">
-        <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:-mt-10 sm:mb-4">
+        <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:mb-4">
           Web Developer
         </h4>
-        <h1 className="text-2xl sm:text-8xl font-semibold sm:font-bold text-center sm:text-left text-gray-950 dark:text-gray-50 mb-3 sm:mb-10">
+        <h1 className="text-2xl sm:text-7xl font-semibold sm:font-bold text-center sm:text-left text-gray-950 dark:text-gray-50 mb-3 sm:mb-5">
           Hey! I am
         </h1>
-        <h2 className="text-3xl sm:text-7xl text-center sm:text-left font-bold mb-3">
+        <h2 className="text-3xl sm:text-6xl text-center sm:text-left font-bold mb-3">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-600">
             Masud Rana
           </span>

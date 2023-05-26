@@ -37,12 +37,12 @@ const Contact = () => {
     setVerified(true);
   };
   return (
-    <div id="contact" className="container sm:px-20 py-5 sm:py-12">
-      <div className="py-2 sm:py-16 text-center">
+    <div id="contact" className="sm:p-20 py-5">
+      <div className="py-2 sm:py-0 sm:pb-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           I want to Hear From you
         </h2>
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600 sm:mt-3">
+        <h1 className="uppercase text-3xl sm:text-4xl font-bold text-blue-600 sm:mt-3">
           Contact me
         </h1>
       </div>
@@ -131,7 +131,7 @@ const Contact = () => {
             ></textarea>
             <div className="flex flex-col sm:flex-row justify-between">
               <ReCAPTCHA
-                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                sitekey="6LeABjwmAAAAABaXBVJW5-ZGS-V8xcoGEzm0dkTZ"
                 onChange={handleVerified}
               />
               <button

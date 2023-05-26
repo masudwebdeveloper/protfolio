@@ -182,12 +182,12 @@ const SKills = () => {
     },
   ];
   return (
-    <div id="skill" className="container sm:px-20 sm:py-20">
-      <div className="py-7 sm:py-16 text-center">
+    <div id="skill" className="sm:p-20">
+      <div className="py-7 sm:pb-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           My Skill progress so far
         </h2>
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold text-blue-600">
+        <h1 className="uppercase text-3xl sm:text-4xl font-bold text-blue-600">
           SKills
         </h1>
       </div>

@@ -17,8 +17,18 @@ const Header = () => {
     };
   }, [toggle]);
 
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href");
+    const targetElement = document.querySelector(targetId || "");
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="container sm:px-20">
+    <div className="sm:px-20">
       <div className="flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-x-2 cursor-pointer">
           <img
@@ -36,25 +46,29 @@ const Header = () => {
         <div className="flex item-center gap-6">
           {/* desktop mode */}
           <div className="hidden sm:flex gap-7 items-center">
-            <a href="/" className="navbar">
+            <a href="#banner" className="navbar" onClick={handleClick}>
               Home
             </a>
-            <a href="#about" className="navbar">
+            <a href="#about" onClick={handleClick} className="navbar">
               About
             </a>
-            <a href="#service" className="navbar">
+            <a href="#service" onClick={handleClick} className="navbar">
               Services
             </a>
-            <a href="#skill" className="navbar">
+            <a href="#skill" onClick={handleClick} className="navbar">
               Skills
             </a>
-            <a href="#myWork" className="navbar">
+            <a href="#myWork" onClick={handleClick} className="navbar">
               My Work
             </a>
-            <a href="#contact" className="navbar">
+            <a href="#contact" onClick={handleClick} className="navbar">
               Contact
             </a>
-            <Link target="_blank" to="https://github.com/masudwebdeveloper" className="navbar">
+            <Link
+              target="_blank"
+              to="https://github.com/masudwebdeveloper"
+              className="navbar"
+            >
               <FaGithub />
             </Link>
           </div>
@@ -66,42 +80,83 @@ const Header = () => {
             onClick={() => setToggle((prev) => !prev)}
           >
             {toggle ? (
-              <VscClose className="text-2xl text-slate-50 mr-7"></VscClose>
+              <VscClose className="text-2xl text-gray-900 dark:text-slate-50 mr-7"></VscClose>
             ) : (
-              <RxHamburgerMenu className="text-2xl text-slate-50 mr-7"></RxHamburgerMenu>
+              <RxHamburgerMenu className="text-2xl text-gray-900 dark:text-slate-50 mr-7"></RxHamburgerMenu>
             )}
           </button>
         </div>
       </div>
       {/* mobile mode */}
       <div
-        className={`absolute border-t-2 border-blue-500 top-16 right-0 z-50 flex w-4/5 text-center flex-col gap-y-2 bg-[#334155] duration-300 ${
+        className={`absolute border-t-2 border-blue-500 top-16 right-0 z-50 flex w-4/5 text-center flex-col gap-y-2 bg-gray-50 dark:bg-[#334155] duration-300 ${
           toggle
             ? "translate-x-0 scale-100 transition-all"
             : "translate-x-96 scale-0"
         }`}
       >
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        <a
+          href="#banner"
+          className="mobile-nav"
+          onClick={() => {
+            handleToggle(), handleClick;
+          }}
+        >
           Home
-        </Link>
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        </a>
+        <a
+          href="#about"
+          className="mobile-nav"
+          onClick={() => {
+            handleToggle(), handleClick;
+          }}
+        >
           About
-        </Link>
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        </a>
+        <a
+          href="#service"
+          className="mobile-nav"
+          onClick={() => {
+            handleToggle(), handleClick;
+          }}
+        >
           Services
-        </Link>
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        </a>
+        <a
+          href="#skill"
+          className="mobile-nav"
+          onClick={() => {
+            handleToggle(), handleClick;
+          }}
+        >
           Skills
-        </Link>
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        </a>
+        <a
+          href="#myWork"
+          className="mobile-nav"
+          onClick={() => {
+            handleToggle(), handleClick;
+          }}
+        >
           My Work
-        </Link>
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        </a>
+        <a
+          href="#contact"
+          className="mobile-nav"
+          onClick={() => {
+            handleToggle(), handleClick;
+          }}
+        >
           Contact
-        </Link>
-        <Link to="#" className="mobile-nav" onClick={handleToggle}>
+        </a>
+        <a
+          target="_blank"
+          href="https://github.com/masudwebdeveloper"
+          className="mobile-nav"
+          onClick={handleToggle}
+        >
           <FaGithub className="text-center inline-block" />
-        </Link>
+        </a>
         <button
           className="py-2 px-3 mx-2 mb-2 bg-green-50 rounded-md text-md font-medium hover:bg-blue-800 hover:text-blue-50 transition-all duration-200"
           onClick={handleToggle}

@@ -7,7 +7,7 @@
     @apply text-xl text-gray-950 dark:text-slate-50 opacity-75 hover:opacity-100 hover:text-blue-700;
   }
   .mobile-nav {
-    @apply text-xl text-gray-900 dark:text-slate-50 opacity-75 hover:opacity-100 hover:font-medium;
+    @apply text-xl dark:text-white hover:bg-slate-400 text-gray-900 hover:font-medium;
   }
 }
 
