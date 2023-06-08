@@ -12,7 +12,7 @@ const Banner = () => {
   };
 
   return (
-    <div id="banner" className="sm:px-20 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
+    <div id="banner" className="sm:px-30 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
       <div className="sm:-mt-10">
         <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:mb-4">
           Web Developer

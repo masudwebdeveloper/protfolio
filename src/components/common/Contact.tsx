@@ -32,12 +32,11 @@ const Contact = () => {
       );
   };
 
-  const handleVerified = (value: any) => {
-    console.log("varified value: ", value);
+  const handleVerified = () => {
     setVerified(true);
   };
   return (
-    <div id="contact" className="sm:p-20 py-5">
+    <div id="contact" className="sm:px-30 sm:py-20 py-5">
       <div className="py-2 sm:py-0 sm:pb-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           I want to Hear From you
@@ -101,14 +100,14 @@ const Contact = () => {
                 id="user_name"
                 required
                 placeholder="Your Name"
-                className="bg-gray-200 dark:bg-[#14143A] p-3 sm:p-5 rounded-md text-gray-950 dark:text-gray-100 text-md sm:text-xl flex-grow"
+                className="bg-gray-200 dark:bg-[#14143A] p-3 sm:p-5 rounded-md text-gray-950 dark:text-gray-100 text-md sm:text-xl w-full"
               />
               <input
                 type="email"
                 name="user_email"
                 id="email"
                 placeholder="your email"
-                className="bg-gray-200 dark:bg-[#14143A] p-3 sm:p-5 rounded-md text-gray-950 dark:text-gray-100 text-md sm:text-xl flex-grow"
+                className="bg-gray-200 dark:bg-[#14143A] p-3 sm:p-5 rounded-md text-gray-950 dark:text-gray-100 text-md sm:text-xl w-full"
                 required
               />
             </div>

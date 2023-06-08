@@ -50,7 +50,7 @@ const services: IService[] = [
 ];
 const Service = () => {
   return (
-    <div id="service" className="sm:p-20">
+    <div id="service" className="sm:px-30 sm:py-20">
       <div className="py-3 sm:pb-16 text-center">
         <h2 className="uppercase text-md sm:text-2xl text-gray-950 dark:text-gray-200">
           What service i offer you
