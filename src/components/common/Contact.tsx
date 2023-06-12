@@ -36,7 +36,7 @@ const Contact = () => {
     setVerified(true);
   };
   return (
-    <div id="contact" className="sm:px-30 sm:py-20 py-5">
+    <div id="contact" className="sm:px-32 sm:py-20 py-5">
       <div className="py-2 sm:py-0 sm:pb-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           I want to Hear From you

@@ -6,13 +6,14 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
+import { Button } from "../share/Button";
 const Banner = () => {
   const handleHireMeClick = () => {
     window.location.href = "mailto:abdullainfo30@gmail.com";
   };
 
   return (
-    <div id="banner" className="sm:px-30 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
+    <div id="banner" className="sm:px-32 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
       <div className="sm:-mt-10">
         <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:mb-4">
           Web Developer
@@ -29,7 +30,7 @@ const Banner = () => {
           Am a Front-end base Back-end focus web developer passionate and
           experienced in buinding Web application.
         </p>
-        <button
+        {/* <button
           onClick={handleHireMeClick}
           className="flex items-center w-[170px] sm:w-[200px] mx-auto sm:ml-0 bg-blue-500 hover:bg-blue-600 transition duration-150 px-7 sm:px-10 py-2 sm:py-4 rounded-full mt-10 text-2xl font-medium text-white group"
         >
@@ -37,7 +38,8 @@ const Banner = () => {
           <span>
             <TiChevronRightOutline className="inline-block ml-1 translate-x-0 group-hover:translate-x-2 transition-all duration-200"></TiChevronRightOutline>
           </span>
-        </button>
+        </button> */}
+        <Button text='Hire me' onClick={handleHireMeClick} />
         <p className="text-lg sm:text-2xl text-gray-950 dark:text-gray-300 mt-5 text-center sm:text-left sm:mt-20">
           Follow Me:
         </p>

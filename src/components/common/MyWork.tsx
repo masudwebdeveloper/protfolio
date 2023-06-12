@@ -87,7 +87,7 @@ const MyWork = () => {
   ];
 
   return (
-    <div id="myWork" className="sm:px-30 sm:py-20">
+    <div id="myWork" className="sm:px-32 sm:py-20">
       <div className="py-10 sm:py-0 sm:pb-16 text-center">
         <h2 className="uppercase text-xl sm:text-2xl text-gray-950 dark:text-gray-200">
           Check out my all Projects

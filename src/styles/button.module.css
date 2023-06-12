@@ -1,0 +1,41 @@
+.anim_btn {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .anim_btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(45deg, #ffeb3b, #00bcd4, #ff5722, #8bc34a);
+    background-size: 400% 400%;
+    animation: AnimBtn 10s ease infinite;
+    border-radius: 10px;
+  }
+  .anim_btn span{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  @keyframes AnimBtn {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

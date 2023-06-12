@@ -37,7 +37,7 @@ const Header = () => {
   }
   const { theme, handleTheme } = themeContext;
   return (
-    <div className="sm:px-30">
+    <div className="sm:px-32">
       <div className="flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-x-2 cursor-pointer">
           <img

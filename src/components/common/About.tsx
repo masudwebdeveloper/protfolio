@@ -1,9 +1,10 @@
 import aboutImage from "../../assets/images/mail-to-sms-compatible-toute-messagerie.svg";
 import { TiChevronRightOutline } from "react-icons/ti";
+import { Button } from "../share/Button";
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col-reverse sm:flex-row gap-y-5 sm:px-30 sm:py-20 items-center py-4">
+    <div id="about" className="container flex flex-col-reverse sm:flex-row gap-y-5 sm:px-32 sm:py-20 items-center py-4">
       <img src={aboutImage} className="w-full sm:w-2/5" alt="aboutIamge" />
       <div className="mx-5">
         <h4 className="text-blue-500 text-lg sm:text-2xl font-bold mb-4">
@@ -29,7 +30,7 @@ const About = () => {
           </a>{" "}
           Course. I'm React web developer passionate about open source.
         </p>
-        <a
+        {/* <a
           href="https://drive.google.com/file/d/1CxzlmCRkpOFJf7w51dFG6ROXvRCyw5Oz/view?usp=drive_link"
           className="flex items-center w-[180px] bg-blue-500 hover:bg-blue-600 transition duration-150 px-5 sm:px-10 py-2 sm:py-4 rounded-full mt-4 sm:mt-10 text-xl sm:text-2xl font-normal sm:font-medium text-white group sm:w-[250px]"
           target="_blank"
@@ -38,7 +39,8 @@ const About = () => {
           <span>
             <TiChevronRightOutline className="inline-block ml-1 translate-x-0 group-hover:translate-x-2 transition-all duration-200"></TiChevronRightOutline>
           </span>
-        </a>
+        </a> */}
+        <Button text="Download cv" to="https://drive.google.com/file/d/1CxzlmCRkpOFJf7w51dFG6ROXvRCyw5Oz/view?usp=drive_link"/>
       </div>
     </div>
   );
