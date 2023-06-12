@@ -1,17 +1,18 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { BiPhone } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Button } from "../share/Button";
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [verified, setVerified] = useState<boolean>(false);
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [verified, setVerified] = useState<boolean>(false);
   const form: any = useRef();
   const sendEmail = (e: any) => {
     e.preventDefault();
-    setIsLoading(true);
+    // setIsLoading(true);
     emailjs
       .sendForm(
         "service_v7vmdpq",
@@ -22,7 +23,7 @@ const Contact = () => {
       .then(
         (result: any) => {
           if (result.text === "OK") {
-            setIsLoading(false);
+            // setIsLoading(false);
             e.target.reset();
           }
         },
@@ -32,9 +33,9 @@ const Contact = () => {
       );
   };
 
-  const handleVerified = () => {
-    setVerified(true);
-  };
+  // const handleVerified = () => {
+  //   setVerified(true);
+  // };
   return (
     <div id="contact" className="sm:px-32 sm:py-20 py-5">
       <div className="py-2 sm:py-0 sm:pb-16 text-center">
@@ -131,9 +132,9 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row justify-between">
               <ReCAPTCHA
                 sitekey="6LeABjwmAAAAABaXBVJW5-ZGS-V8xcoGEzm0dkTZ"
-                onChange={handleVerified}
+                
               />
-              <button
+              {/* <button
                 disabled={!verified}
                 className={`sm:mt-3 py-2 sm:py-3 w-[100px] sm:w-[150px] dark:hover:bg-[#017AF4] transition duration-150 dark:text-[#017AF4] bg-gray-200 dark:hover:text-gray-50 rounded-full hover:bg-blue-500 hover:text-gray-50 dark:bg-[#14143A] text-xl sm:text-2xl font-medium sm:-pt-2 ${
                   !verified && "cursor-not-allowed"
@@ -141,7 +142,8 @@ const Contact = () => {
                 type="submit"
               >
                 {isLoading ? "sending..." : "send"}
-              </button>
+              </button> */}
+              <Button text="submit" />
             </div>
           </form>
         </div>

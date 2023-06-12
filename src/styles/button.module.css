@@ -1,4 +1,4 @@
-.anim_btn {
+/* .anim_btn {
     position: relative;
     border: none;
     background-color: transparent;
@@ -38,4 +38,87 @@
       background-position: 0% 50%;
     }
   }
-  
+   */
+
+.anim_btn{
+  width: 180px;
+  height: 50px;
+  background: #092636;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.anim_btn::before{
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to left, #f502f5, #00ffc8);
+  animation: animBtn 5s linear infinite;
+}
+.anim_btn:hover::before{
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to left, #f502f5, #00ffc8);
+  animation: animStop 5s linear forwards;
+}
+@keyframes animSotp{
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animBtn {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+
+.anim_btn::after{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 175px;
+  height: 45px;
+  background: #092636;
+  border-radius: 10px;
+}
+
+.anim_btn span{
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  z-index: 111;
+  animation: animText 5s linear 1s infinite;
+}
+
+@keyframes animText {
+  0%{
+    color: #fff;
+  }
+  50%{
+    color: #f502f5;
+  }
+  100%{
+    color: #00ffc8
+  }
+}
+
+
+

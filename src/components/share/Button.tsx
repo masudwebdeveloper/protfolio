@@ -7,7 +7,7 @@ type ButtonProps = {
 };
 export const Button = ({ onClick, text,  to = '#' }: ButtonProps) => {
   return (
-    <div className="mt-5">
+    <div className="">
       <Link
         target="_blank"
         to={to}

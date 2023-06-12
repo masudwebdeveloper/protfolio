@@ -1,5 +1,5 @@
 import bannerImage from "../../assets/images/15.png";
-import { TiChevronRightOutline } from "react-icons/ti";
+// import { TiChevronRightOutline } from "react-icons/ti";
 import {
   FaFacebookF,
   FaInstagram,
@@ -13,8 +13,8 @@ const Banner = () => {
   };
 
   return (
-    <div id="banner" className="sm:px-32 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
-      <div className="sm:-mt-10">
+    <div id="banner" className="banner_back sm:px-32 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
+      <div className="sm:-mt-10 content">
         <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:mb-4">
           Web Developer
         </h4>
@@ -22,11 +22,11 @@ const Banner = () => {
           Hey! I am
         </h1>
         <h2 className="text-3xl sm:text-6xl text-center sm:text-left font-bold mb-3">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-600">
+          <span className="title">
             Masud Rana
           </span>
         </h2>
-        <p className="text-md sm:text-2xl text-gray-900 text-center sm:text-left dark:text-gray-300">
+        <p className="text-md sm:text-2xl mb-5 text-gray-900 text-center sm:text-left dark:text-gray-300">
           Am a Front-end base Back-end focus web developer passionate and
           experienced in buinding Web application.
         </p>

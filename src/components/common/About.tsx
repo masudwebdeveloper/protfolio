@@ -1,5 +1,5 @@
 import aboutImage from "../../assets/images/mail-to-sms-compatible-toute-messagerie.svg";
-import { TiChevronRightOutline } from "react-icons/ti";
+// import { TiChevronRightOutline } from "react-icons/ti";
 import { Button } from "../share/Button";
 
 const About = () => {
@@ -23,7 +23,7 @@ const About = () => {
           standards🔥
         </p>
         <br />
-        <p className="text-gray-950 dark:text-gray-200 text-sm sm:text-xl">
+        <p className="text-gray-950 mb-5 dark:text-gray-200 text-sm sm:text-xl">
           I am currently complete web development from{" "}
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <strong className="hover:text-blue-600">Programming Hero</strong>

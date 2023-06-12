@@ -15,12 +15,12 @@ const Home = () => {
     <main>
       {/* Header */}
       <div
-        className={`dark:bg-[#0D012C] bg-gray-200 sticky top-0 z-50 text-opacity-0`}
+        className={`dark:bg-[#0D012C]  bg-gray-200 sticky top-0 z-50 text-opacity-0`}
       >
         <Header />
       </div>
       {/* Banner */}
-      <div className=" dark:bg-[#11063E] bg-gray-100">
+      <div className=" dark:bg-[#11063E] container_banner bg-gray-100">
         <Banner />
       </div>
       {/* about section */}
