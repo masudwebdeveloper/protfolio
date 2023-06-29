@@ -21,6 +21,3 @@ module.exports = {
     "react-hooks/rules-of-hooks": 0,
   },
 };
-//
-// "react-refresh/only-export-components": "warn",
-//     "no-unused-vars": 0,
