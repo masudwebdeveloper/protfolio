@@ -18,7 +18,7 @@ const Home = () => {
         <Header />
       </div>
       {/* Banner */}
-      <div className=" dark:bg-[#11063E] container_banner bg-gray-100">
+      <div className=" dark:bg-[#11063E] bg-gray-100">
         <Banner />
       </div>
       {/* about section */}
