@@ -17,10 +17,10 @@ const Banner = () => {
       className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center"
     >
       <div className="sm:-mt-10 content">
-        <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:mb-4">
+        <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-400 dark:text-gray-200 sm:mb-4">
           Web Developer
         </h4>
-        <h1 className="text-2xl sm:text-7xl font-semibold sm:font-bold text-center sm:text-left text-gray-950 dark:text-gray-50 mb-3 sm:mb-5">
+        <h1 className="text-2xl sm:text-7xl font-semibold sm:font-bold text-center sm:text-left text-gray-600 dark:text-gray-50 mb-3 sm:mb-5">
           Hey! I am
         </h1>
         <h2 className="text-3xl sm:text-6xl text-center sm:text-left font-bold mb-3">

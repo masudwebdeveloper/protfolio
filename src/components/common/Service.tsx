@@ -58,10 +58,10 @@ const Service = () => {
       className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20"
     >
       <div className="py-3 sm:pb-16 text-center">
-        <h2 className="uppercase text-md sm:text-2xl text-gray-950 dark:text-gray-200">
+        <h2 className="uppercase text-base md:text-xl text-gray-950 dark:text-gray-200">
           What service i offer you
         </h2>
-        <h1 className="uppercase text-2xl sm:text-4xl font-bold text-blue-600">
+        <h1 className="uppercase text-base sm:text-2xl font-bold text-blue-600">
           Services
         </h1>
       </div>

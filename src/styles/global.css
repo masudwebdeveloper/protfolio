@@ -53,18 +53,18 @@
 }
 @keyframes colorAnimation {
   0% {
-    color: #3b2279;
+    color: #4718bd;
   }
   25% {
-    color: #d406f4;
+    color: #c40de0;
   }
   50% {
-    color: #df0c0c;
+    color: #c4c41a;
   }
   75% {
-    color: #06adf4;
+    color: #138cc0;
   }
   100% {
-    color: #e75f11;
+    color: #a44812;
   }
 }

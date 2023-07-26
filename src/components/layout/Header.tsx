@@ -41,14 +41,14 @@ const Header = () => {
       <div className="flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-x-2 cursor-pointer">
           <img
-            className="w-10 h-10 sm:w-12 sm:h-12 ml-2 sm:ml-0 rounded-full border-4 border-gray-900 dark:border-gray-50"
+            className="w-10 h-10 md:w-12 md:h-12 ml-2 md:ml-0 rounded-full border-2 border-gray-500 dark:border-gray-50"
             src={profile}
             alt="profile"
           />
-          <span className="text-gray-900 dark:text-gray-100 font-bold text-xl sm:text-3xl">
-            Web_Dev{" "}
+          <span className="text-gray-500 dark:text-gray-100 font-bold text-xl sm:text-3xl">
+            Web_Dev
           </span>
-          <span className="animate-pulse text-gray-900 dark:text-gray-50 sm:mt-2 text-3xl">
+          <span className="animate-pulse text-gray-600 dark:text-gray-50 sm:mt-2 text-3xl">
             __
           </span>
         </Link>

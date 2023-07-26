@@ -35,7 +35,7 @@ const Contact = () => {
       className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20 py-5"
     >
       <div className="py-2 sm:py-0 sm:pb-16 text-center">
-        <h2 className="uppercase text-base sm:text-xl text-gray-800 dark:text-gray-200">
+        <h2 className="uppercase text-base md:text-xl text-gray-500 dark:text-gray-200">
           I want to Hear From you
         </h2>
         <h1 className="uppercase text-lg md:text-2xl font-semibold text-blue-600">
@@ -49,10 +49,10 @@ const Contact = () => {
               <BiPhone className="w-6 h-6 text-[#182F51]" />
             </div>
             <div>
-              <h3 className="text-sm md:text-xl font-semibold text-gray-950 dark:text-gray-200">
-                Call me:{" "}
+              <h3 className="text-sm md:text-xl font-semibold text-gray-500 dark:text-gray-200">
+                Call me:
               </h3>
-              <p className="text-sm md:text-xl font-semibold text-gray-950 dark:text-gray-200">
+              <p className="text-sm md:text-xl font-semibold text-gray-500 dark:text-gray-200">
                 +88 01796-682951
               </p>
             </div>
@@ -62,10 +62,10 @@ const Contact = () => {
               <AiOutlineMail className="w-6 h-6 text-[#000000]" />
             </div>
             <div>
-              <h3 className="text-sm md:text-xl font-semibold text-gray-950 dark:text-gray-200">
-                Email me:{" "}
+              <h3 className="text-sm md:text-xl font-semibold text-gray-500 dark:text-gray-200">
+                Email me:
               </h3>
-              <p className="text-sm md:text-xl font-semibold text-gray-950 dark:text-gray-200">
+              <p className="text-sm md:text-xl font-semibold text-gray-500 dark:text-gray-200">
                 abdullainfo30@gmail.com
               </p>
             </div>
@@ -75,10 +75,10 @@ const Contact = () => {
               <MdLocationOn className="w-6 h-6 text-[#F10000]" />
             </div>
             <div>
-              <h3 className="text-sm md:text-xl font-semibold text-gray-950 dark:text-gray-200">
+              <h3 className="text-sm md:text-xl font-semibold text-gray-500 dark:text-gray-200">
                 Location:
               </h3>
-              <p className="text-sm md:text-xl font-semibold text-gray-950 dark:text-gray-200">
+              <p className="text-sm md:text-xl font-semibold text-gray-500 dark:text-gray-200">
                 Natore, Bangladesh.
               </p>
             </div>

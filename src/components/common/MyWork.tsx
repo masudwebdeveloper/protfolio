@@ -98,10 +98,10 @@ const MyWork = () => {
   return (
     <div id="myWork" className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20">
       <div className="py-10 sm:py-0 sm:pb-16 text-center">
-        <h2 className="uppercase text-xl sm:text-2xl text-gray-950 dark:text-gray-200">
+        <h2 className="uppercase text-base md:text-xl text-gray-950 dark:text-gray-200">
           Check out my all Projects
         </h2>
-        <h1 className="uppercase text-3xl sm:text-4xl font-bold text-blue-600">
+        <h1 className="uppercase text-base sm:text-2xl font-bold text-blue-600">
           My Works
         </h1>
       </div>
