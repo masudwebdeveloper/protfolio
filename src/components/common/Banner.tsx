@@ -7,6 +7,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { Button } from "../share/Button";
+import Tooltip from "../share/Tooltip";
 const Banner = () => {
   const handleHireMeClick = () => {
     window.location.href = "mailto:abdullainfo30@gmail.com";
@@ -36,41 +37,51 @@ const Banner = () => {
           Follow Me:
         </p>
         <div className="mt-5 flex justify-center sm:justify-start gap-x-5">
-          <a
-            target="_blank"
-            href="https://www.facebook.com/masudwebdeveloper"
-            className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border sm:border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
-          >
-            <FaFacebookF className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
-          </a>
-          <a
-            target="_blank"
-            href="https://github.com/masudwebdeveloper"
-            className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border sm:border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
-          >
-            <FaGithub className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/mrmasudrana/"
-            className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
-          >
-            <FaLinkedinIn className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.instagram.com/masud_1432/"
-            className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
-          >
-            <FaInstagram className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
-          </a>
-          <a
-            target="_blank"
-            href="https://twitter.com/MasudRana2143"
-            className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
-          >
-            <FaTwitter className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
-          </a>
+          <Tooltip content="Facebook">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/masudwebdeveloper"
+              className="w-6 md:w-10 h-6 md:h-10 rounded-full border dark:border-gray-200 border-gray-400 flex items-center justify-center"
+            >
+              <FaFacebookF className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
+            </a>
+          </Tooltip>
+          <Tooltip content="Github">
+            <a
+              target="_blank"
+              href="https://github.com/masudwebdeveloper"
+              className="w-6 md:w-10 h-6 md:h-10 rounded-full border dark:border-gray-200 border-gray-400 flex items-center justify-center"
+            >
+              <FaGithub className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
+            </a>
+          </Tooltip>
+          <Tooltip content="Linkedin">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mrmasudrana/"
+              className="w-6 md:w-10 h-6 md:h-10 rounded-full border border-gray-400 flex items-center justify-center"
+            >
+              <FaLinkedinIn className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
+            </a>
+          </Tooltip>
+          <Tooltip content="Instagram">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/masud_1432/"
+              className="w-6 md:w-10 h-6 md:h-10 rounded-full border border-gray-400 flex items-center justify-center"
+            >
+              <FaInstagram className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
+            </a>
+          </Tooltip>
+          <Tooltip content="Twitter">
+            <a
+              target="_blank"
+              href="https://twitter.com/MasudRana2143"
+              className="w-6 md:w-10 h-6 md:h-10 rounded-full border border-gray-400 flex items-center justify-center"
+            >
+              <FaTwitter className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
+            </a>
+          </Tooltip>
         </div>
       </div>
       <div className="">

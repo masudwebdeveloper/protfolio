@@ -113,8 +113,8 @@ const MyWork = () => {
           slidesPerView={3}
           navigation
           autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
+            delay: 2000,
+            disableOnInteraction: true,
           }}
           loop={true}
           pagination={{ clickable: true }}
