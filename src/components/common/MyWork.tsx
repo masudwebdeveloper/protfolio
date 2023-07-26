@@ -113,7 +113,7 @@ const MyWork = () => {
           slidesPerView={3}
           navigation
           autoplay={{
-            delay: 2000,
+            delay: 4000,
             disableOnInteraction: true,
           }}
           loop={true}

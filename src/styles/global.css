@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 @layer components {
   .navbar {
@@ -9,9 +10,7 @@
   .mobile-nav {
     @apply text-xl dark:text-white hover:bg-slate-400 text-gray-900 hover:font-medium;
   }
-  
 }
-
 
 * {
   margin: 0;
@@ -20,6 +19,7 @@
   text-decoration: none;
   list-style: none;
   outline: 0;
+  font-family: "Fira Code", monospace;
 }
 
 .banner_back {

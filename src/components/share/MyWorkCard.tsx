@@ -5,7 +5,7 @@ type WorkType = {
 };
 const MyWorkCard = ({ work }: WorkType) => {
   return (
-    <div className="p-4 sm:p-7 group sm:min-h-[650px] dark:bg-[#14143A] shadow-md border-opacity-20 border dark:border-gray-700 border-gray-600 rounded-lg transition duration-300 ease-in-out">
+    <div className="p-4 sm:p-7 group dark:bg-[#14143A] shadow-md border-opacity-20 border dark:border-gray-700 border-gray-600 rounded-lg transition duration-300 ease-in-out">
       <div>
         <img
           className="rounded-lg group-hover:scale-105 transition-all duration-200 sm:h-[250px] w-full"
@@ -20,7 +20,7 @@ const MyWorkCard = ({ work }: WorkType) => {
         <h2 className="mt-3 text-3xl font-semibold text-blue-500">
           {work.title}
         </h2>
-        <p className="mt-2 text-sm sm:text-md font-normal dark:text-gray-50 text-gray-950">{work.description}</p>
+        <p className="mt-2 text-sm sm:text-md font-normal dark:text-gray-50 text-gray-950">{work.description.length > 200 ? work.description.slice(0,200) + "..." : work.description}</p>
       </div>
       <div className="mt-5 flex flex-col gap-y-5 sm:flex-row items-center justify-between">
         <a

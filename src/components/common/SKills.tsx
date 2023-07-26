@@ -206,7 +206,7 @@ const SKills = () => {
           slidesPerView={8}
           navigation
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: true,
           }}
           loop={true}
