@@ -1,5 +1,4 @@
 import bannerImage from "../../assets/images/15.png";
-// import { TiChevronRightOutline } from "react-icons/ti";
 import {
   FaFacebookF,
   FaInstagram,
@@ -13,7 +12,10 @@ const Banner = () => {
   };
 
   return (
-    <div id="banner" className="banner_back sm:px-32 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center">
+    <div
+      id="banner"
+      className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20 flex gap-y-8 flex-col sm:flex-row items-center"
+    >
       <div className="sm:-mt-10 content">
         <h4 className="text-xl sm:text-3xl text-center sm:text-left font-normal sm:font-medium text-gray-950 dark:text-gray-200 sm:mb-4">
           Web Developer
@@ -22,9 +24,7 @@ const Banner = () => {
           Hey! I am
         </h1>
         <h2 className="text-3xl sm:text-6xl text-center sm:text-left font-bold mb-3">
-          <span className="title">
-            Masud Rana
-          </span>
+          <span className="title">Masud Rana</span>
         </h2>
         <p className="text-md sm:text-2xl mb-5 text-gray-900 text-center sm:text-left dark:text-gray-300">
           Am a Front-end base Back-end focus web developer passionate and
@@ -39,7 +39,7 @@ const Banner = () => {
             <TiChevronRightOutline className="inline-block ml-1 translate-x-0 group-hover:translate-x-2 transition-all duration-200"></TiChevronRightOutline>
           </span>
         </button> */}
-        <Button text='Hire me' onClick={handleHireMeClick} />
+        <Button text="Hire me" onClick={handleHireMeClick} />
         <p className="text-lg sm:text-2xl text-gray-950 dark:text-gray-300 mt-5 text-center sm:text-left sm:mt-20">
           Follow Me:
         </p>

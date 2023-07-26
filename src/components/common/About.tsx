@@ -1,12 +1,11 @@
 import aboutImage from "../../assets/images/mail-to-sms-compatible-toute-messagerie.svg";
-// import { TiChevronRightOutline } from "react-icons/ti";
 import { Button } from "../share/Button";
 
 const About = () => {
   return (
     <div
       id="about"
-      className="container flex flex-col-reverse sm:flex-row gap-y-5 sm:px-32 sm:py-20 items-center py-4"
+      className="container flex flex-col-reverse sm:flex-row gap-y-5 px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20 items-center py-4"
     >
       <img src={aboutImage} className="w-full sm:w-2/5" alt="aboutIamge" />
       <div className="mx-5">

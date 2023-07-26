@@ -21,6 +21,12 @@ import {
 import { TbBrandNextjs } from "react-icons/tb";
 import SkillCard from "../share/SkillCard";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+
 export interface ISkill {
   id: number;
   name: string;
@@ -181,8 +187,9 @@ const SKills = () => {
       icon: netlify,
     },
   ];
+
   return (
-    <div id="skill" className="sm:px-32 sm:py-20">
+    <div id="skill" className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20">
       <div className="py-7 sm:pb-16 text-center">
         <h2 className="uppercase text-lg sm:text-2xl text-gray-950 dark:text-gray-200">
           My Skill progress so far
@@ -191,10 +198,47 @@ const SKills = () => {
           SKills
         </h1>
       </div>
-      <div className="grid grid-cols-2 mx-2 sm:mx-0 sm:grid-cols-7 gap-2 justify-center">
-        {skills.map((skill) => (
-          <SkillCard key={skill.id} skill={skill} />
-        ))}
+      <div className="">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Autoplay, A11y]}
+          spaceBetween={10}
+          slidesPerView={8}
+          navigation
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: true,
+          }}
+          loop={true}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            319: {
+              slidesPerView: 2,
+              spaceBetween: 5,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 6,
+              spaceBetween: 10,
+            },
+            1440: {
+              slidesPerView: 8,
+              spaceBetween: 10,
+            },
+          }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {skills.map((skill) => (
+            <SwiperSlide key={skill.id}>
+              <SkillCard skill={skill} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

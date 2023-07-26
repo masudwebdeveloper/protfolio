@@ -12,7 +12,7 @@ const SkillCard = ({ skill }: SkillType) => {
           {skill.percentage}
         </span>
       </div>
-      <h2 className="uppercase text-lg sm:text-2xl font-medium sm:font-bold text-gray-950 dark:text-gray-200">
+      <h2 className="uppercase text-lg sm:text-xl font-medium sm:font-bold text-gray-950 dark:text-gray-200">
         {skill.name}
       </h2>
       <button className="btn-effect group-hover:border-pink-500 text-pink-500 dark:text-yellow-500">

@@ -1,4 +1,9 @@
 import MyWorkCard from "../share/MyWorkCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 export interface IMyWork {
   id: number;
   img: string;
@@ -49,7 +54,8 @@ const MyWork = () => {
       text: "Online quizz",
       liveLink: "https://quizzy-program.netlify.app/home",
       clientCodeLink: "https://github.com/masudwebdeveloper/quizzy-program-9",
-      description: "Quizzy is a web application developed with React and Tailwind CSS, offering an interactive and engaging quiz experience using JavaScript for dynamic functionality and user interactions.",
+      description:
+        "Quizzy is a web application developed with React and Tailwind CSS, offering an interactive and engaging quiz experience using JavaScript for dynamic functionality and user interactions.",
       technology: "React | Tailwind | JavaScript",
     },
     {
@@ -60,7 +66,8 @@ const MyWork = () => {
       liveLink: "https://email-password-auth-953b5.web.app/",
       clientCodeLink: "https://github.com/masudwebdeveloper/oldbazaar-client",
       serverCodeLink: "https://github.com/masudwebdeveloper/oldbazaar-server",
-      description: "OLDBazaar is a full-stack web application built with ReactJS and Tailwind CSS for the frontend, while Node.js, Express.js, and MongoDB handle the backend operations. It leverages Firebase for authentication and uses JSON Web Tokens (JWT) and JavaScript for secure user sessions and dynamic functionality.",
+      description:
+        "OLDBazaar is a full-stack web application built with ReactJS and Tailwind CSS for the frontend, while Node.js, Express.js, and MongoDB handle the backend operations. It leverages Firebase for authentication and uses JSON Web Tokens (JWT) and JavaScript for secure user sessions and dynamic functionality.",
       technology:
         "ReactJs | NodeJs | ExpressJs | MongoDB | Tailwind | Firebase | JsonWebToken | JavaScript",
     },
@@ -71,7 +78,8 @@ const MyWork = () => {
       text: "Construction consultation",
       liveLink: "https://brigate-construction.netlify.app/",
       clientCodeLink: "https://github.com/masudwebdeveloper",
-      description: "Brigate is a web application developed with ReactJS and CSS, offering a modern and interactive user interface. With its seamless user interactions and engaging design, it provides a captivating user experience. Leveraging the power of ReactJS, Brigate ensures efficient and responsive rendering, enhancing the performance of the application. CSS plays a crucial role in the styling of Brigate, allowing for customization and visual appeal. Together, ReactJS and CSS make Brigate an ideal choice for building visually stunning and dynamic web applications.",
+      description:
+        "Brigate is a web application developed with ReactJS and CSS, offering a modern and interactive user interface. With its seamless user interactions and engaging design, it provides a captivating user experience. Leveraging the power of ReactJS, Brigate ensures efficient and responsive rendering, enhancing the performance of the application. CSS plays a crucial role in the styling of Brigate, allowing for customization and visual appeal. Together, ReactJS and CSS make Brigate an ideal choice for building visually stunning and dynamic web applications.",
       technology: "ReactJs | CSS",
     },
     {
@@ -81,13 +89,14 @@ const MyWork = () => {
       text: "Protfolio Site",
       liveLink: "https://mrmasud.netlify.app/",
       clientCodeLink: "https://github.com/masudwebdeveloper/protfolio",
-      description: "Protfolio is a modern web application developed with Vite, React, and TypeScript, leveraging the power of these technologies to create a fast and efficient development environment. With the integration of Tailwind CSS, it offers a highly customizable and responsive UI, making it ideal for showcasing personal or professional portfolios.",
+      description:
+        "Protfolio is a modern web application developed with Vite, React, and TypeScript, leveraging the power of these technologies to create a fast and efficient development environment. With the integration of Tailwind CSS, it offers a highly customizable and responsive UI, making it ideal for showcasing personal or professional portfolios.",
       technology: "Vite + React | typescript | tailwind ",
     },
   ];
 
   return (
-    <div id="myWork" className="sm:px-32 sm:py-20">
+    <div id="myWork" className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20">
       <div className="py-10 sm:py-0 sm:pb-16 text-center">
         <h2 className="uppercase text-xl sm:text-2xl text-gray-950 dark:text-gray-200">
           Check out my all Projects
@@ -96,10 +105,43 @@ const MyWork = () => {
           My Works
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mx-2 sm:mx-0">
-        {myWorks.map((work) => (
-          <MyWorkCard key={work.id} work={work} />
-        ))}
+      <div className="">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Autoplay, A11y]}
+          spaceBetween={10}
+          slidesPerView={3}
+          navigation
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            319: {
+              slidesPerView: 1,
+              spaceBetween: 5,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+          }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {myWorks.map((work) => (
+            <SwiperSlide key={work.id}>
+              <MyWorkCard work={work} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

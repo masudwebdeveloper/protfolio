@@ -1,6 +1,6 @@
-import {useContext} from 'react';
+import { useContext } from "react";
 import profile from "../../assets/images/profile.jpg";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscClose } from "react-icons/vsc";
@@ -37,7 +37,7 @@ const Header = () => {
   }
   const { theme, handleTheme } = themeContext;
   return (
-    <div className="sm:px-32">
+    <div className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24">
       <div className="flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-x-2 cursor-pointer">
           <img
@@ -54,7 +54,7 @@ const Header = () => {
         </Link>
         <div className="flex item-center gap-6">
           {/* desktop mode */}
-          <div className="hidden sm:flex gap-7 items-center">
+          <div className="hidden lg:flex gap-7 items-center">
             <a href="#banner" className="navbar" onClick={handleClick}>
               Home
             </a>

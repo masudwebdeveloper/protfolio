@@ -2,7 +2,10 @@ import { Button } from "../share/Button";
 
 const Subcribe = () => {
   return (
-    <div id="subscribe" className="sm:px-32 sm:py-20 py-10">
+    <div
+      id="subscribe"
+      className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24 sm:py-20 py-10"
+    >
       <div className="py-10">
         <h4 className="text-blue-500 text-md sm:text-xl font-bold">
           Newsletter
@@ -19,13 +22,13 @@ const Subcribe = () => {
           </div>
           <div className="w-full sm:w-1/2">
             <form className="flex justify-between items-center gap-3">
-              <input type="text" name="text" id="text" placeholder="Enter your email" className="p-3 rounded-lg w-full" />
-              {/* <button
-                className="py-2 sm:py-5 px-6 sm:px-10 mt-5 hover:bg-blue-600 transition duration-150 rounded-full text-gray-100 text-xl font-bold bg-blue-500 sm:ml-10"
-                type="submit"
-              >
-                Subcribe
-              </button> */}
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Enter your email"
+                className="p-3 rounded-lg w-full"
+              />
               <Button text="Subcribe" />
             </form>
           </div>
