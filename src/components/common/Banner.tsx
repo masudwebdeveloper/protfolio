@@ -1,6 +1,7 @@
 import bannerImage from "../../assets/images/15.png";
 import {
   FaFacebookF,
+  FaGithub,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
@@ -30,15 +31,6 @@ const Banner = () => {
           Am a Front-end base Back-end focus web developer passionate and
           experienced in buinding Web application.
         </p>
-        {/* <button
-          onClick={handleHireMeClick}
-          className="flex items-center w-[170px] sm:w-[200px] mx-auto sm:ml-0 bg-blue-500 hover:bg-blue-600 transition duration-150 px-7 sm:px-10 py-2 sm:py-4 rounded-full mt-10 text-2xl font-medium text-white group"
-        >
-          Hire me
-          <span>
-            <TiChevronRightOutline className="inline-block ml-1 translate-x-0 group-hover:translate-x-2 transition-all duration-200"></TiChevronRightOutline>
-          </span>
-        </button> */}
         <Button text="Hire me" onClick={handleHireMeClick} />
         <p className="text-lg sm:text-2xl text-gray-950 dark:text-gray-300 mt-5 text-center sm:text-left sm:mt-20">
           Follow Me:
@@ -50,6 +42,13 @@ const Banner = () => {
             className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border sm:border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
           >
             <FaFacebookF className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/masudwebdeveloper"
+            className="w-9 sm:w-14 h-9 sm:h-14 rounded-full border sm:border-2 dark:border-gray-200 border-gray-400 flex items-center justify-center"
+          >
+            <FaGithub className="inline-block text-gray-950 dark:text-white text-lg sm:text-2xl" />
           </a>
           <a
             target="_blank"

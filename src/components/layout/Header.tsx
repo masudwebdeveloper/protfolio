@@ -1,17 +1,16 @@
-import { useContext } from "react";
 import profile from "../../assets/images/profile.jpg";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscClose } from "react-icons/vsc";
 import { useEffect, useState } from "react";
-import { BiSun, BiMoon } from "react-icons/bi";
-
+import { BiMoon, BiSun } from "react-icons/bi";
 import { ThemeContext, ThemeContextProps } from "../../contexts/ThemeProvider";
-const Header = () => {
-  const themeContext = useContext<ThemeContextProps | undefined>(ThemeContext);
+import { useContext } from "react";
 
+const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const themeContext = useContext<ThemeContextProps | undefined>(ThemeContext);
   const handleToggle = () => {
     setToggle(false);
   };
@@ -32,10 +31,12 @@ const Header = () => {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   if (!themeContext) {
     return null;
   }
   const { theme, handleTheme } = themeContext;
+
   return (
     <div className="px-1 sm:px-2 md:px-5 lg:px-14 xl:px-24">
       <div className="flex items-center justify-between py-4">
@@ -73,13 +74,37 @@ const Header = () => {
             <a href="#contact" onClick={handleClick} className="navbar">
               Contact
             </a>
-            <Link
-              target="_blank"
-              to="https://github.com/masudwebdeveloper"
-              className="navbar"
+            <div
+              className={`w-6 md:w-10 h-6 md:h-10 cursor-pointer flex items-center justify-center rounded-full ${
+                theme === "light" ? "bg-gray-300" : "bg-gray-700"
+              }`}
             >
-              <FaGithub />
-            </Link>
+              {theme === "dark" ? (
+                <BiSun
+                  onClick={handleTheme}
+                  className="text-base md:text-xl text-yellow-300"
+                />
+              ) : (
+                <BiMoon
+                  onClick={handleTheme}
+                  className="text-base md:text-xl"
+                />
+              )}
+            </div>
+          </div>
+          <div
+            className={`w-6 md:w-10 h-6 md:h-10 cursor-pointer flex items-center justify-center rounded-full lg:hidden ${
+              theme === "light" ? "bg-gray-300" : "bg-gray-700"
+            }`}
+          >
+            {theme === "dark" ? (
+              <BiSun
+                onClick={handleTheme}
+                className="text-base md:text-xl text-yellow-300"
+              />
+            ) : (
+              <BiMoon onClick={handleTheme} className="text-base md:text-xl" />
+            )}
           </div>
           <button className="py-2 px-4 dark:bg-green-50 bg-blue-500 rounded-md text-md font-medium dark:hover:bg-blue-800 hover:text-blue-50 transition-all duration-200 hidden sm:block">
             Contact Me
@@ -89,9 +114,9 @@ const Header = () => {
             onClick={() => setToggle((prev) => !prev)}
           >
             {toggle ? (
-              <VscClose className="text-2xl text-gray-900 dark:text-slate-50 mr-7"></VscClose>
+              <VscClose className="text-2xl text-gray-800 dark:text-slate-50 mr-3"></VscClose>
             ) : (
-              <RxHamburgerMenu className="text-2xl text-gray-900 dark:text-slate-50 mr-7"></RxHamburgerMenu>
+              <RxHamburgerMenu className="text-2xl text-gray-800 dark:text-slate-50 mr-3"></RxHamburgerMenu>
             )}
           </button>
         </div>
@@ -172,20 +197,6 @@ const Header = () => {
         >
           Contact Me
         </button>
-      </div>
-      <div
-        className={`w-10 sm:w-14 h-10 sm:h-14 cursor-pointer flex items-center justify-center fixed right-4 sm:right-10 bottom-10 rounded-full ${
-          theme === "light" ? "bg-gray-300" : "bg-gray-700"
-        }`}
-      >
-        {theme === "dark" ? (
-          <BiSun
-            onClick={handleTheme}
-            className="text-xl sm:text-3xl text-yellow-300"
-          />
-        ) : (
-          <BiMoon onClick={handleTheme} className="text-xl sm:text-3xl" />
-        )}
       </div>
     </div>
   );

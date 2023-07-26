@@ -9,10 +9,8 @@ import Contact from "../common/Contact";
 import Footer from "../layout/Footer";
 
 const Home = () => {
-  
-
   return (
-    <main>
+    <main className="relative">
       {/* Header */}
       <div
         className={`dark:bg-[#0D012C]  bg-gray-200 sticky top-0 z-50 text-opacity-0`}
@@ -51,7 +49,6 @@ const Home = () => {
       <div className="dark:bg-[#0D012C] bg-gray-100">
         <Footer />
       </div>
-      
     </main>
   );
 };
